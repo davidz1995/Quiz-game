@@ -21,7 +21,7 @@ const Game = function () {
     const questions = useSelector(state => state.getAll)
 
     const questionsByLevel = questions.filter(question => question.difficulty === level)
-    console.log(level)
+    //console.log(level)
 
     function randomSelection() {
         let question = Math.floor(Math.random()*questionsByLevel.length);
@@ -37,6 +37,7 @@ const Game = function () {
             setLevel(level + 1)
             setScore(score + +randomQuestion.prize)
         }else{
+            sendData()
             alert('Incorrect answer, you will be redirected to Home');
             window.location.href = '/';
         }
@@ -92,7 +93,7 @@ const Game = function () {
             </div>
             <div className="answers">
             {randomQuestion?
-            randomQuestion.answers.map((e, index) => 
+            randomQuestion.answers.sort(function() { return Math.random() - 0.5 }).map((e, index) => 
             <button key={index} onClick={handleClick} value={e}>{e}</button>
             ):null}
             </div>
