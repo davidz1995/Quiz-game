@@ -16,9 +16,9 @@ Game developed with Javascript, ReactJS, NodeJS and MongoDb.
 - [ ] Luego ubicarse en la carpeta 'frontend' y ejecutar npm start y estaría levantado todo el proyecto.
 - [ ] Para observar los datos de los usuarios guardados y la estructura de las preguntas se puede hacer atraves de 'Postman' o 'Insomnia'
 - [ ] Las rutas para consultar los datos en servidor local son:
-GET
-- USERS: http://localhost:4000/api/users
-- Questions: http://localhost:4000/api/questions
+- GET
+  - USERS: http://localhost:4000/api/users
+  - Questions: http://localhost:4000/api/questions
 
 - [ ] El proyecto está deployado en el siguiente link
 
