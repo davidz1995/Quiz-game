@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Game = function () {
     const [level, setLevel] = useState(1);
+    const [score, setScore] = useState(0);
 
     //Redux
     const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const Game = function () {
     const handleClick = (event) => {
         if(event.target.value === randomQuestion.correctAnswer && level < 6){
             setLevel(level + 1)
+            setScore(score + +randomQuestion.prize)
         }else{
             alert('Perdiste');
             window.location.href = '/';
@@ -39,14 +41,20 @@ const Game = function () {
 
     return (
         <div className="game">
+        
         {randomQuestion?
             <h1 className="question">{randomQuestion.question}</h1>:null}
+            <div>
+                <h3>Score</h3>
+                <p>{score}</p>
+            </div>
             <div className="answers">
             {randomQuestion?
             randomQuestion.answers.map((e, index) => 
             <button key={index} onClick={handleClick} value={e}>{e}</button>
             ):null}
             </div>
+        
         </div>
     )
 }
