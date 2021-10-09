@@ -1,7 +1,7 @@
 # Quiz-game
 Game developed with Javascript, ReactJS, NodeJS and MongoDb.
 
-#Pasos para ejecutar la pagina
+# Pasos para ejecutar el proyecto
 
 [] Clonar el repositorio a su computadora.
 [] En la terminal localizarse en la rama Main usando el comando $ git checkout main.
