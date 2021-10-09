@@ -1,0 +1,65 @@
+.home{
+    background-color:black;
+    height: 100vh;
+}
+
+.title_game{
+    color: white;
+    font-size: 6rem;
+    position: relative;
+    top: 25%;
+}
+
+.enter{
+    text-decoration: none;
+    background-color: white;
+    font-size: 1.3rem;
+    color: blueviolet;
+    padding: .5em 5em .5em 5em;
+    position: relative;
+    top: 40%;
+    border-radius: 50em;
+}
+
+.enter:hover{
+    background-color:transparent;
+    color: white;
+    border-color: white;
+    border-style: solid;
+}
+
+@media (max-width: 600px) {
+    .title_game{
+        font-size: 5rem;
+    }
+
+    .enter{
+        padding: .5em 3em .5em 3em;
+    }
+}
+
+@media (max-width: 500px) {
+    .title_game{
+        font-size: 4rem;
+        top: 35%;
+    }
+
+    .enter{
+        padding: .5em 1.6em .5em 1.6em;
+        font-size: 1.2rem;
+        top: 45%;
+    }
+}
+
+@media (max-width: 300px) {
+    .title_game{
+        font-size: 4rem;
+        top: 25%;
+    }
+
+    .enter{
+        padding: .5em 1.6em .5em 1.6em;
+        font-size: 1.2rem;
+        top: 35%;
+    }
+}

@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import '../styles/userData.css';
+
 
 const UserData = function () {
     const [name, setName] = useState('');
@@ -18,11 +20,11 @@ const UserData = function () {
     return (
         <div className="user_data">
         <form>
-        <h1>Welcome</h1>
+        <h1>Bienvenido</h1>
         <input type='text' placeholder="Name" onChange={handleChangeName}></input>
         <input type='text' placeholder="Email" onChange={handleChangeEmail}></input>
         {name.length > 3 && email.length > 10?
-            <Link to = '/game'>Start</Link>
+            <Link to ='/game' className='start'>Empezar</Link>
             : null
         }
         </form>

@@ -1,0 +1,171 @@
+.game{
+    background-color: black;
+    height: 100vh;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    top: 5%;
+}
+
+.level{
+    color: white;
+}
+
+.level h2 {
+    font-size: 1rem;
+}
+
+.score{
+    color: white;
+}
+
+.exit{
+    text-decoration: none;
+    color: white;
+    width: max-content;
+}
+
+.exit:hover{
+    color: violet;
+}
+
+.question{
+    color: white;
+    position: relative;
+    top: 20%;
+}
+
+.answers{
+    position: relative;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.answers button{
+    margin-right: 2%;
+    color: white;
+    background-color: transparent;
+    padding: 1em;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1em;
+    font-size: 1rem;
+}
+
+.answers button:hover{
+    background-color: rgba(238, 130, 238, 0.534);
+    cursor: pointer;
+}
+
+.prize{
+    color: white;
+    position: relative;
+    top: 20%;
+}
+
+.total_prize{
+    color: rgb(132, 216, 77);
+}
+
+.prize h3{
+    font-size: 4rem;
+}
+
+.prize p{
+    font-size: 3rem;
+}
+
+.finish{
+    color: white;
+    background-color: transparent;
+    padding: 1em;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1em;
+    font-size: 1rem;
+    position: relative;
+    top: 35%;
+}
+
+.finish:hover{
+    background-color: rgba(238, 130, 238, 0.534);
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    .answers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 30%;
+    }
+
+    .answers button{
+        margin-bottom: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+        padding: .8em;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px){
+    .prize h3{
+        font-size: 3rem;
+    }
+    
+    .prize p{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px){
+    .prize h3{
+        font-size: 2.5rem;
+    }
+    
+    .prize p{
+        font-size: 2rem;
+    }
+
+    .navBar{
+        
+    }
+
+}
+
+@media (max-width: 500px){
+    .prize h3{
+        font-size: 2rem;
+    }
+    
+    .prize p{
+        font-size: 1.5rem;
+    }
+
+    .finish{
+        padding: .7em;
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 400px){
+    .prize h3{
+        font-size: 1.5rem;
+    }
+    
+    .prize p{
+        font-size: 1rem;
+    }
+
+    .finish{
+        padding: .6em;
+        font-size: .8rem;
+    }
+}

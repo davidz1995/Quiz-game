@@ -2,10 +2,10 @@ import '../styles/Home.css';
 
 const Home = () => {
     return (
-        <>
-        <h1>Quiz Game</h1>
-        <a href='/userData'>Enter</a>
-        </>
+        <div className = 'home'>
+        <h1 className = 'title_game'>Quiz Game</h1>
+        <a href='/userData' className = 'enter'>Entrar</a>
+        </div>
     )
 }
 

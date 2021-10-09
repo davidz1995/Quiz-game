@@ -3,6 +3,7 @@ import { getAll } from '../store/actions/actions';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
+import '../styles/game.css';
 
 const Game = function () {
     let name = localStorage.getItem('nameUserQuiz');
@@ -38,7 +39,7 @@ const Game = function () {
             setScore(score + +randomQuestion.prize)
         }else{
             sendData()
-            alert('Incorrect answer, you will be redirected to Home');
+            alert('Perdiste, conseguiste ' + score + ' puntos.');
             window.location.href = '/';
         }
     }
@@ -69,34 +70,42 @@ const Game = function () {
 
     return (
         <div className="game">
-
+        {/* Navbar */}
         {level === 6 ?
             null:
-            <div>
+            <div className='navBar'>
                 <div className='level'>
-                    <h2>Level</h2>
+                    <h2>Nivel</h2>
                     <p>{level}</p>
                 </div>
-                <Link to='/' onClick={handleExit}>Exit</Link>
+                <div className='score'>
+                    <h3>Puntaje</h3>
+                    <p>{score}</p>
+                </div>
+            <Link to='/' onClick={handleExit} className='exit'>Salir</Link>
             </div>
         }
-        
-        {level >= 6 ?
-        <button onClick={handleFinishClick}>Finish</button>
-        :null}
-         
+        {/* Question */}
         {randomQuestion?
             <h1 className="question">{randomQuestion.question}</h1>:null}
-            <div>
-                <h3>Score</h3>
-                <p>{score}</p>
-            </div>
+        {/* Answer */}
             <div className="answers">
             {randomQuestion?
             randomQuestion.answers.sort(function() { return Math.random() - 0.5 }).map((e, index) => 
             <button key={index} onClick={handleClick} value={e}>{e}</button>
             ):null}
             </div>
+        {/* Last screen */}
+        {level >= 6 ?
+            <>
+            <div className='prize'>
+                    <h3>Ganaste! Tu premio son </h3>
+                    <p className='total_prize'>{score}</p>
+                    <p>QuizCoins</p>
+            </div>
+            <button className='finish' onClick={handleFinishClick}>Finalizar</button>
+            </>
+            :null}
         </div>
     )
 }
