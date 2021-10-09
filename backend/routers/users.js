@@ -13,15 +13,26 @@ router.get('/:id',async(req, res) => {
 })
 
 router.post(`/`, async (req, res) =>{
-    let user = new Users({
-        name: req.body.name,
-        email: req.body.email,
-        score: req.body.score,
-        prize: req.body.prize
-    })
-    user = await user.save();
+    //Agregar puntajes historicos para cada jugador, basandose en email
+    const existingUser = await Users.findOneAndUpdate(
+        { email: req.body.email }, 
+        { $push: { score: req.body.score } }
+        )
+
+    if(existingUser){
+        return;
+    } else {
+        let user = new Users({
+            name: req.body.name,
+            email: req.body.email,
+            score: req.body.score
+        })
     
-    !user? res.status(400).send('User can not be created.'): res.status(200).send(user)
+        user = await user.save();
+        
+        !user? res.status(400).send('User can not be created.'): res.status(200).send(user)
+    }
+    
 })
 
 module.exports = router

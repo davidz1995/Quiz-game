@@ -4,10 +4,9 @@ const Home = () => {
     return (
         <>
         <h1>Quiz Game</h1>
-        <a href='/game'>Start</a>
+        <a href='/userData'>Enter</a>
         </>
     )
-
 }
 
 export default Home

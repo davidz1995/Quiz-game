@@ -7,17 +7,12 @@ router.get(`/`,async (req, res) =>{
     !questionsList? res.status(500).send('Questions not found'):res.status(200).send(questionsList)
 })
 
-router.get('/:id',async(req, res) => {
-    const question = await Questions.findById(req.params.id);
-    !question? res.status(500).send('Question not found'):res.status(200).send(question);
-})
-
 router.post(`/`, async (req, res) =>{
     let question = new Questions({
         question:req.body.question,
         difficulty: req.body.difficulty,
         correctAnswer: req.body.correctAnswer,
-        incorrectAnswer: req.body.incorrectAnswer
+        answers: req.body.answers
     })
     question = await question.save();
     

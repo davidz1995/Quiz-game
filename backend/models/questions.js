@@ -13,19 +13,14 @@ const questionsSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    incorrectAnswer:{
+    answers:{
         type:Array,
         required:true
+    },
+    prize:{
+        type:String,
+        required:true
     }
-})
-
-//Creo un Id virutal para no usar el default de Mongo
-questionsSchema.virtual('id').get(function() {
-    return this._id.toHexString();
-});
-
-questionsSchema.set('toJSON', {
-    virtuals:true
 })
 
 exports.Questions = mongoose.model('Questions', questionsSchema)
