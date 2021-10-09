@@ -28,6 +28,7 @@
     text-decoration: none;
     color: white;
     width: max-content;
+    width: fit-content;
 }
 
 .exit:hover{
@@ -135,9 +136,36 @@
     }
 
     .navBar{
-        
+        flex-direction: column;
     }
 
+    .question{
+        top: 15%;
+    }
+
+    .answers{
+        top:20%
+    }
+
+    .level {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin-bottom: 1em;
+        margin-left: 5%;
+    }
+
+    .score {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .exit{
+        position: absolute;
+        left: 60%;
+    }
 }
 
 @media (max-width: 500px){
