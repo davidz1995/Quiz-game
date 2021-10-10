@@ -21,8 +21,8 @@ const UserData = function () {
         <div className="user_data">
         <form>
         <h1>Bienvenido</h1>
-        <input type='text' placeholder="Name" onChange={handleChangeName}></input>
-        <input type='text' placeholder="Email" onChange={handleChangeEmail}></input>
+        <input placeholder="Name" onChange={handleChangeName} required></input>
+        <input placeholder="Email" onChange={handleChangeEmail} required></input>
         {name.length > 3 && email.length > 10?
             <Link to ='/game' className='start'>Empezar</Link>
             : null

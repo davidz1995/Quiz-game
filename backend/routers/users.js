@@ -15,7 +15,7 @@ router.get('/:id',async(req, res) => {
 router.post(`/`, async (req, res) =>{
     //Agregar puntajes historicos para cada jugador, basandose en email
     const existingUser = await Users.findOneAndUpdate(
-        { email: req.body.email }, 
+        { name: req.body.name ,email: req.body.email }, 
         { $push: { score: req.body.score } }
         )
 

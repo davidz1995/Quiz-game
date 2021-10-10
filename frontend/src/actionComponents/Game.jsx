@@ -45,6 +45,7 @@ const Game = function () {
     }
 
     function sendData() {
+        //https://quizgamebackend.herokuapp.com//api/users (VERCEL)
         fetch('http://localhost:4000/api/users', {
           method: 'POST',
           headers: {
@@ -71,7 +72,7 @@ const Game = function () {
     return (
         <div className="game">
         {/* Navbar */}
-        {level === 6 ?
+        {level > questionsByLevel.length + 1 ?
             null:
             <div className='navBar'>
                 <div className='level'>
@@ -96,7 +97,7 @@ const Game = function () {
             ):null}
             </div>
         {/* Last screen */}
-        {level >= 6 ?
+        {level > 2 && level >= questionsByLevel.length + 1 ?
             <>
             <div className='prize'>
                     <h3>Ganaste! Tu premio son </h3>
