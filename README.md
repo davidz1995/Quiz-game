@@ -16,5 +16,5 @@ Game developed with Javascript, ReactJS, NodeJS and MongoDb.
 
 - [ ] El proyecto está deployado en el siguiente link
 
-*****Archivo .env no está ignorado en el repositorio para que se pueda hacer la conexión a base de datos.*******
+*****Archivo .env no está ignorado en el repositorio para que se pueda hacer la conexión a base de datos.
 
