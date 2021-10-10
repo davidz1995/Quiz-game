@@ -45,7 +45,7 @@ const Game = function () {
     }
 
     function sendData() {
-        fetch('http://localhost:4000/api/users', {
+        fetch('https://quizgamebackend.herokuapp.com/api/users', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
