@@ -45,7 +45,7 @@ const Game = function () {
     }
 
     function sendData() {
-        //https://quizgamebackend.herokuapp.com//api/users (VERCEL)
+        //https://quizgamebackend.herokuapp.com/api/users (VERCEL)
         fetch('http://localhost:4000/api/users', {
           method: 'POST',
           headers: {
