@@ -14,7 +14,7 @@ Game developed with Javascript, ReactJS, NodeJS and MongoDb.
   - USERS: http://localhost:4000/api/users
   - Questions: http://localhost:4000/api/questions
 
-- [ ] El proyecto está deployado en el siguiente link
+- [ ] El proyecto está deployado en el siguiente link https://quiz-game-ten.vercel.app/
 
 *****Archivo .env no está ignorado en el repositorio para que se pueda hacer la conexión a base de datos.***
 
