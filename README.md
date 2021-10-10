@@ -4,7 +4,6 @@ Game developed with Javascript, ReactJS, NodeJS and MongoDb.
 # Pasos para ejecutar el proyecto
 
 - [ ] Clonar el repositorio a su computadora.
-- [ ] En la terminal localizarse en la rama Main usando el comando $ git checkout main.
 - [ ] Ubicarse en la carpeta 'frontend' y ejecutar $ npm install para instalar dependecias.
 - [ ] Ubicarse luego en la carpeta 'backend' y ejecutar $ npm install para instalar dependecias.
 - [ ] En la carpeta 'backend' crear un archivo con el nombre '.env' y ahí agregar estas credenciales para poder conectar a la base de datos
