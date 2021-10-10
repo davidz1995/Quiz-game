@@ -33,6 +33,7 @@ mongoose.connect(process.env.CONNECTION_STRING)
 })
 
 //Inicio de servidor
-app.listen(4000, ()=>{
+const PORT = process.env.PORT  || 4000
+app.listen(PORT, ()=>{
     console.log('Server is running in port 4000');
 })
